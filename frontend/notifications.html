@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MySocial - Notifications</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="logo" onclick="goHome()">MySocial</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="friends.html">Friends</a>
+    <a href="messages.html">Messages</a>
+    <a href="notifications.html">Notifications</a>
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search...">
+    <button>Go</button>
+  </div>
+  <button class="logout-btn">Logout</button>
+  <div class="hamburger" id="hamburger">
+    <div></div><div></div><div></div>
+  </div>
+</nav>
+
+<!-- Notifications Container -->
+<div class="container">
+  <h2>🔔 Notifications</h2>
+  <div class="notifications-list">
+    <div class="notification">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John">
+      <div class="notification-content">
+        <p><strong>John</strong> liked your post.</p>
+        <small>2 hours ago</small>
+      </div>
+    </div>
+    <div class="notification">
+      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Emma">
+      <div class="notification-content">
+        <p><strong>Emma</strong> commented: "Great job!"</p>
+        <small>5 hours ago</small>
+      </div>
+    </div>
+    <div class="notification">
+      <img src="https://randomuser.me/api/portraits/men/78.jpg" alt="Mike">
+      <div class="notification-content">
+        <p><strong>Mike</strong> sent you a friend request.</p>
+        <small>Yesterday</small>
+      </div>
+    </div>
+    <div class="notification">
+      <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Sophia">
+      <div class="notification-content">
+        <p><strong>Sophia</strong> sent you a message.</p>
+        <small>2 days ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon"></a>
+      <a href="https://x.com/?lang=en" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" class="social-icon"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="social-icon"></a>
+      <a href="https://www.linkedin.com/feed/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="LinkedIn" class="social-icon"></a>
+    </div>
+    <p class="copyright">© 2025 MySocial. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+function goHome(){window.location.href="index.html";}
+
+// Hamburger Menu
+const hamburger = document.getElementById("hamburger");
+const navbar = document.getElementById("navbar");
+hamburger.addEventListener("click", ()=>{
+  navbar.classList.toggle("active");
+  hamburger.classList.toggle("toggle");
+});
+</script>
+
+</body>
+</html>

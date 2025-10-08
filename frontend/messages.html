@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MySocial - Messages</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="logo" onclick="goHome()">MySocial</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="friends.html">Friends</a>
+    <a href="messages.html">Messages</a>
+    <a href="notifications.html">Notifications</a>
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search...">
+    <button>Go</button>
+  </div>
+  <button class="logout-btn">Logout</button>
+  <div class="hamburger" id="hamburger">
+    <div></div><div></div><div></div>
+  </div>
+</nav>
+
+<!-- Messages Container -->
+<div class="container">
+  <h2>💬 Messages</h2>
+  <div class="messages-container">
+    <!-- Conversations List -->
+    <div class="conversations">
+  <h3>Conversations</h3>
+  <div class="conversation active" data-name="John">
+    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John">
+    <div>
+      <strong>John</strong>
+      <p>Hey! How are you?</p>
+    </div>
+  </div>
+  <div class="conversation" data-name="Emma">
+    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Emma">
+    <div>
+      <strong>Emma</strong>
+      <p>Are we meeting tomorrow?</p>
+    </div>
+  </div>
+  <div class="conversation" data-name="Mike">
+    <img src="https://randomuser.me/api/portraits/men/78.jpg" alt="Mike">
+    <div>
+      <strong>Mike</strong>
+      <p>Check out this article!</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <!-- Chat Window -->
+   <div class="chat-window">
+  <div class="chat-header" id="chatHeader">
+    <h3>John</h3>
+    <span>Online</span>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="message received">Hey! How are you?</div>
+    <div class="message sent">I'm good, thanks! How about you?</div>
+    <div class="message received">Doing great! Want to catch up later?</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" placeholder="Type a message...">
+    <button>Send</button>
+  </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon"></a>
+      <a href="https://x.com/?lang=en" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" class="social-icon"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="social-icon"></a>
+      <a href="https://www.linkedin.com/feed/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="LinkedIn" class="social-icon"></a>
+    </div>
+    <p class="copyright">© 2025 MySocial. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+function goHome(){window.location.href="index.html";}
+
+// Hamburger Menu
+const hamburger = document.getElementById("hamburger");
+const navbar = document.getElementById("navbar");
+hamburger.addEventListener("click", ()=>{
+  navbar.classList.toggle("active");
+  hamburger.classList.toggle("toggle");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MySocial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="logo" onclick="goHome()">MySocial</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="friends.html">Friends</a>
+      <a href="messages.html">Messages</a>
+      <a href="notifications.html">Notifications</a>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Go</button>
+    </div>
+
+    <button class="logout-btn">Logout</button>
+
+     <!-- Hamburger -->
+  <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</nav>
+
+
+  <script>
+    /*nav bar*/
+    function goHome() {
+      window.location.href = "index.html"; // Logo redirects to home
+    }
+
+     // Hamburger toggle
+     const hamburger = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
+
+  hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+    // Animate hamburger into cross
+    hamburger.classList.toggle("toggle");
+  });
+
+/*banner*/
+ function exploreNow() {
+    window.location.href = 'index.html'; // Redirect to home feed
+  }
+
+/*post*/
+// Create Post Function
+  function createPost(){
+    const text=document.getElementById("postText").value;
+    if(!text)return alert("Please write something!");
+    const postsDiv=document.getElementById("posts");
+    const newPost=document.createElement("div");
+    newPost.className="post";
+    newPost.innerHTML=`
+      <p>${text}</p>
+      <div class="post-buttons">
+        <button>👍 Like</button>
+        <button>💬 Comment</button>
+        <button>↗️ Share</button>
+      </div>
+      <small>Posted just now</small>
+    `;
+    postsDiv.prepend(newPost);
+    document.getElementById("postText").value="";
+  }
+  </script>
+
+  <!-- Banner -->
+  <section class="banner">
+  <div class="banner-content">
+    <h1>🚀 Welcome to MySocial</h1>
+    <p>Connect with friends, share your moments, and explore trending topics.</p>
+    <button onclick="exploreNow()">Explore Now</button>
+  </div>
+</section>
+
+<!-- Main container -->
+<div class="container">
+  <!-- User Feed -->
+  <section class="feed">
+    <h2>📌 User Feed</h2>
+    <div class="create-post">
+      <textarea id="postText" rows="8" placeholder="What's on your mind?"></textarea>
+      <div class="post-actions">
+        <input type="file" id="mediaUpload">
+        <button class="btn" onclick="createPost()">Post</button>
+      </div>
+    </div>
+    <div id="posts" class="posts">
+      <!-- Posts will appear here -->
+    </div>
+  </section>
+
+  <!-- Trending Topics -->
+  <aside class="trending">
+    <h2>🔥 Trending Topics</h2>
+    <ul id="trendingList">
+      <li><a href="https://www.w3schools.com/whatis/"></a>#Web Development</li>
+      <li><a href="https://openai.com/"></a>#AI</li>
+      <li><a href="https://www.w3schools.com/js/"></a>#JavaScript</li>
+      <li><a href="https://opensource.com/"></a>#OpenSource</li>
+      <li><a href="index.html"></a>#SocialApp</li>
+    </ul>
+  </aside>
+</div>
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon"></a>
+      <a href="https://x.com/?lang=en" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" class="social-icon"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="social-icon"></a>
+      <a href="https://www.linkedin.com/feed/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="LinkedIn" class="social-icon"></a>
+    </div>
+    <p class="copyright">© 2025 MySocial. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

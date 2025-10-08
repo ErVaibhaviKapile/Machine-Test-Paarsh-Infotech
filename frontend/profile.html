@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MySocial - Profile</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="logo" onclick="goHome()">MySocial</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="friends.html">Friends</a>
+    <a href="messages.html">Messages</a>
+    <a href="notifications.html">Notifications</a>
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search...">
+    <button>Go</button>
+  </div>
+  <button class="logout-btn">Logout</button>
+  <div class="hamburger" id="hamburger">
+    <div></div><div></div><div></div>
+  </div>
+</nav>
+
+<!-- Profile Header -->
+<section class="profile-header">
+  <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="Profile Picture" class="profile-pic">
+</section>
+
+<!-- Profile Info -->
+<div class="container">
+  <div class="profile-info">
+    <h1>Jane Doe</h1>
+    <p>@janedoe</p>
+    <p>Full Stack Developer | Web & Social Enthusiast | Always learning</p>
+    <button class="edit-profile-btn">Edit Profile</button>
+  </div>
+
+  <!-- Friends List -->
+  <section class="friends">
+    <h2>👥 Friends</h2>
+    <div class="friend-list">
+      <div class="friend"><img src="https://randomuser.me/api/portraits/men/32.jpg"><span>John</span></div>
+      <div class="friend"><img src="https://randomuser.me/api/portraits/women/45.jpg"><span>Emma</span></div>
+      <div class="friend"><img src="https://randomuser.me/api/portraits/men/78.jpg"><span>Mike</span></div>
+      <div class="friend"><img src="https://randomuser.me/api/portraits/women/22.jpg"><span>Sophia</span></div>
+      <div class="friend"><img src="https://randomuser.me/api/portraits/men/56.jpg"><span>David</span></div>
+    </div>
+  </section>
+
+  <!-- User Posts -->
+  <section class="user-posts">
+    <h2>📌 My Posts</h2>
+    <div class="post">
+      <p>Excited to start my new project on Web Development! 💻</p>
+      <div class="post-buttons">
+        <button>👍 Like</button>
+        <button>💬 Comment</button>
+        <button>↗️ Share</button>
+      </div>
+      <small>Posted 2 hours ago</small>
+    </div>
+    <div class="post">
+      <p>Just attended an amazing online workshop about React.js and MERN stack.</p>
+      <div class="post-buttons">
+        <button>👍 Like</button>
+        <button>💬 Comment</button>
+        <button>↗️ Share</button>
+      </div>
+      <small>Posted yesterday</small>
+    </div>
+  </section>
+</div>
+
+ <!-- Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon"></a>
+      <a href="https://x.com/?lang=en" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" class="social-icon"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="social-icon"></a>
+      <a href="https://www.linkedin.com/feed/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="LinkedIn" class="social-icon"></a>
+    </div>
+    <p class="copyright">© 2025 MySocial. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  function goHome(){window.location.href="index.html";}
+
+  // Hamburger Menu
+  const hamburger = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
+  hamburger.addEventListener("click", ()=>{
+    navbar.classList.toggle("active");
+    hamburger.classList.toggle("toggle");
+  });
+</script>
+
+</body>
+</html>

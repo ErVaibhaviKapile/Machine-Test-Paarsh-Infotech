@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MySocial - Friends</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="logo" onclick="goHome()">MySocial</div>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="friends.html">Friends</a>
+    <a href="messages.html">Messages</a>
+    <a href="notifications.html">Notifications</a>
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search...">
+    <button>Go</button>
+  </div>
+  <button class="logout-btn">Logout</button>
+  <div class="hamburger" id="hamburger">
+    <div></div><div></div><div></div>
+  </div>
+</nav>
+
+<!-- Friends Page Content -->
+<div class="container">
+  <h2>👥 Friends List</h2>
+  <div class="friends-list">
+    <div class="friend-card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John">
+      <h4>John</h4>
+      <a href="profile.html">View Profile</a>
+    </div>
+    <div class="friend-card">
+      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Emma">
+      <h4>Emma</h4>
+      <a href="profile.html">View Profile</a>
+    </div>
+    <div class="friend-card">
+      <img src="https://randomuser.me/api/portraits/men/78.jpg" alt="Mike">
+      <h4>Mike</h4>
+      <a href="profile.html">View Profile</a>
+    </div>
+    <div class="friend-card">
+      <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Sophia">
+      <h4>Sophia</h4>
+      <a href="profile.html">View Profile</a>
+    </div>
+    <div class="friend-card">
+      <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="David">
+      <h4>David</h4>
+      <a href="profile.html">View Profile</a>
+    </div>
+    <div class="friend-card">
+      <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Alice">
+      <h4>Alice</h4>
+      <a href="profile.html">View Profile</a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon"></a>
+      <a href="https://x.com/?lang=en" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" class="social-icon"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="social-icon"></a>
+      <a href="https://www.linkedin.com/feed/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="LinkedIn" class="social-icon"></a>
+    </div>
+    <p class="copyright">© 2025 MySocial. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+function goHome(){window.location.href="home.html";}
+
+// Hamburger Menu
+const hamburger = document.getElementById("hamburger");
+const navbar = document.getElementById("navbar");
+hamburger.addEventListener("click", ()=>{
+  navbar.classList.toggle("active");
+  hamburger.classList.toggle("toggle");
+});
+</script>
+
+</body>
+</html>
